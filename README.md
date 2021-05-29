@@ -1,5 +1,8 @@
-# KMHColorNet
-A Colorization Model Using a UNet Architecture Based Autoencoder with ResNet Pretrained Encoder 
+# KMHCNet
+A Colorization Model Using a UNet++ Architecture Based Autoencoder with ResNet Pretrained Encoder
+
+## Abstract
+We propose a novel approach to solving the colorization problem which aims to colorize a gray-scale image by using UNet++ Auto-Encoder where the Encoder is compiled using ResNet. This article also shows the effect of each variant of ResNet as well as InceptionResnetV2 and EfficientNet as potential encoders in the network. To show the advantages of using UNet++, we also created some variants replacing the UNet++ with traditional UNet. Thus our article proposes a deep convolutional network framework called KMHCNet which contains multiple variants of the network each having different combination of architecture, encoder, color-space in which to calculate loss on, embedding used before calculating loss and loss function used. Each variants provides us a different overall network with their own advantages and flaws. In this article we showed the results of 16 variants of the KMHCNet after training them on the same Dataset for differing number of epochs. Experiments have shown that most variants of our proposed network can provide pretty good result. To our best apprehension, no prevailing papers or research studies have mentioned this approach of using a segmentation model with variant encoders and using MS-SSIM as a potential loss function to colorize gray-scale images.
 
 ### KMHCNet Variant Structure
 |    Variant 	| Architecture 	|           Encoder 	| ColorSpace_for_Loss_Calculation 	|   Loss_Function 	| Embedding 	|
@@ -40,6 +43,11 @@ A Colorization Model Using a UNet Architecture Based Autoencoder with ResNet Pre
 | KMHCNet_14 	|       93.73 % 	|   11.12 % 	|             10 	|              83.62 M 	|
 | KMHCNet_15 	|       92.85 % 	|    1.47 % 	|             10 	|              83.62 M 	|
 | KMHCNet_16 	|       92.68 % 	|   12.54 % 	|              9 	|              83.62 M 	|
+
+### Model Diagram
+<img src="https://github.com/clownprincejoker/KMHColorNet/blob/main/Model.jpg" 
+alt="IMAGE ALT TEXT HERE" width="100%" border="10" />
+
 
 ### Test Sample Output for All Variants
 <img src="https://github.com/clownprincejoker/KMHColorNet/blob/main/Results/Test_All.jpg" 
