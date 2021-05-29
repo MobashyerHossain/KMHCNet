@@ -2,7 +2,6 @@
 A Colorization Model Using a UNet Architecture Based Autoencoder with ResNet Pretrained Encoder 
 
 ### KMHCNet Variant Structure
----------------------------------------------------------------------------------------------------------------------------
 |    Variant 	| Architecture 	|           Encoder 	| ColorSpace_for_Loss_Calculation 	|   Loss_Function 	| Embedding 	|
 |-------------|---------------|---------------------|-----------------------------------|-------------------|-------------|
 |  KMHCNet_1 	|       Unet++ 	|         Resnet152 	|                             LAB 	|         MS-SSIM 	|      None 	|
@@ -21,10 +20,8 @@ A Colorization Model Using a UNet Architecture Based Autoencoder with ResNet Pre
 | KMHCNet_14 	|       Unet++ 	|         Resnet152 	|                             LAB 	| MSELoss+MS-SSIM 	|     Vgg16 	|
 | KMHCNet_15 	|       Unet++ 	|         Resnet152 	|                             LAB 	|         MSELoss 	|     Vgg16 	|
 | KMHCNet_16 	|       Unet++ 	|         Resnet152 	|                             LAB 	|         MSELoss 	|  Resnet50 	|
----------------------------------------------------------------------------------------------------------------------------
 
 ### KMHCNet Variant Results and Trainable Parameters
------------------------------------------------------------------------------------------
 |    Variant 	| Test_Accuracy 	| Test_Loss 	| Epochs_Trained 	| Trainable_Parameters 	|
 |-------------|-----------------|-------------|-----------------|-----------------------|
 |  KMHCNet_1 	|       94.39 % 	|   18.40 % 	|             43 	|              83.62 M 	|
@@ -43,7 +40,6 @@ A Colorization Model Using a UNet Architecture Based Autoencoder with ResNet Pre
 | KMHCNet_14 	|       93.73 % 	|   11.12 % 	|             10 	|              83.62 M 	|
 | KMHCNet_15 	|       92.85 % 	|    1.47 % 	|             10 	|              83.62 M 	|
 | KMHCNet_16 	|       92.68 % 	|   12.54 % 	|              9 	|              83.62 M 	|
------------------------------------------------------------------------------------------
 
 ### Test Sample Output for All Variants
 <img src="https://github.com/clownprincejoker/KMHColorNet/blob/main/Results/Test_All.jpg" 
